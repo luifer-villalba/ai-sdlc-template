@@ -2,17 +2,10 @@
 
 [tool.ruff]
 line-length = 88
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
 
 [tool.ruff.lint.isort]
-# NOTE: Copilot will set this to your first-party modules during setup.
-known-first-party = ["{FIRST_PARTY_MODULE}"]
-
-[tool.pytest.ini_options]
-# NOTE: Copilot will adjust asyncio_mode based on your framework during setup.
-# FastAPI/pytest-asyncio → "auto"
-# Django/pytest-django   → remove this section, add DJANGO_SETTINGS_MODULE instead
-asyncio_mode = "auto"
+known-first-party = ["tests"]

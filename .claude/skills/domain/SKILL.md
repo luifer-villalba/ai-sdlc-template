@@ -2,49 +2,49 @@
 name: {PROJECT_SLUG}-domain
 description: |
   {PROJECT_NAME} business domain knowledge. Load this skill when working on
-  anything related to {DOMAIN_KEYWORDS}.
+  business concepts, entities, rules, and edge cases.
 ---
 
 # {PROJECT_NAME} — Domain Knowledge
 
 ## What This System Does
 
-{2_TO_3_SENTENCES_DESCRIBING_REAL_WORLD_PURPOSE}
+TODO: Add 2-3 sentences describing the real-world purpose of this system.
 
 ## Users
 
 | User | Role | Interaction |
 |------|------|-------------|
-| {USER_TYPE_1} | {ROLE} | {HOW_THEY_USE_IT} |
-| {USER_TYPE_2} | {ROLE} | {HOW_THEY_USE_IT} |
+| Primary user | TODO | TODO |
+| Secondary user | TODO | TODO |
 
 ## Data Sources
 
-- {DATA_SOURCE_1}: {FORMAT} — {PURPOSE}
-- {DATA_SOURCE_2}: {FORMAT} — {PURPOSE}
+- TODO source: TODO format - TODO purpose
+- TODO source: TODO format - TODO purpose
 
 ## Key Entities
 
 | Entity | Description |
 |--------|-------------|
-| {ENTITY_1} | {DESCRIPTION} |
-| {ENTITY_2} | {DESCRIPTION} |
+| TODO entity | TODO description |
+| TODO entity | TODO description |
 
 ## Core Business Rules
 
-{DESCRIBE_THE_MAIN_DECISION_LOGIC_OR_RULES}
+TODO: Describe the core business rules and decision logic.
 
 ## Business Constraints
 
-- {CONSTRAINT_1}
-- {CONSTRAINT_2}
+- TODO constraint
+- TODO constraint
 
 ## Known Edge Cases
 
-- {EDGE_CASE_1}
-- {EDGE_CASE_2}
+- TODO edge case
+- TODO edge case
 
 ## Future Rules (not yet implemented)
 
-- {FUTURE_RULE_1}
-- {FUTURE_RULE_2}
+- TODO future rule
+- TODO future rule

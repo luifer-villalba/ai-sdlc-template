@@ -1,7 +1,7 @@
 # {PROJECT_NAME} — AI Agent Instructions
 
 > Single source of truth for AI agent instructions.
-> Edit this file, then run `npx @intellectronica/ruler apply` to sync all formats.
+> Edit this file, then run `npx @intellectronica/ruler apply` to generate/sync all agent formats (including AGENTS.md).
 
 ---
 
@@ -33,7 +33,7 @@ Repo: `{GITHUB_USERNAME}/{REPO_NAME}` — deployed on {DEPLOY_PLATFORM}.
 ├── docs/
 ├── Makefile
 ├── .env.example
-└── AGENTS.md
+└── .ruler/instructions.md (canonical)
 ```
 
 ---
@@ -43,7 +43,7 @@ Repo: `{GITHUB_USERNAME}/{REPO_NAME}` — deployed on {DEPLOY_PLATFORM}.
 - No business logic in HTTP handlers/views — use service functions
 - Core business logic must be pure — zero framework dependencies
 - All DB access through the session factory
-- {FRAMEWORK_SPECIFIC_RULE}
+- Add framework-specific guardrails here when bootstrapping a concrete project
 
 ---
 
@@ -77,14 +77,13 @@ Repo: `{GITHUB_USERNAME}/{REPO_NAME}` — deployed on {DEPLOY_PLATFORM}.
 
 ## Dev Commands
 
-    make install
-    make run
+    make build
+    make up
     make test
     make lint
-    make format
+    make check
     make migrate
-    make docker-up
-    make docker-down
+    make down
 
 ---
 

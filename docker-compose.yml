@@ -6,33 +6,8 @@ services:
     ports:
       - "8888:8888"
     environment:
-      - DATABASE_URL=postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}@db:5432/{DB_NAME}
       - DEBUG=true
+      - APP_RUN_COMMAND=${APP_RUN_COMMAND:-python -m http.server 8888}
     volumes:
       - .:/app
-    depends_on:
-      db:
-        condition: service_healthy
-    # NOTE: Copilot will adjust this command based on your framework during setup.
-    # FastAPI → uvicorn app.main:app --host 0.0.0.0 --port 8888 --reload
-    # Django  → python manage.py runserver 0.0.0.0:8888
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8888 --reload
-
-  db:
-    image: postgres:16-alpine
-    environment:
-      - POSTGRES_USER={DB_USER}
-      - POSTGRES_PASSWORD={DB_PASSWORD}
-      - POSTGRES_DB={DB_NAME}
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U {DB_USER} -d {DB_NAME}"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-
-volumes:
-  postgres_data:
+    command: sh -lc "$$APP_RUN_COMMAND"

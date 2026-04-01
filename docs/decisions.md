@@ -5,17 +5,17 @@ Update this file whenever a significant decision is made.
 
 ---
 
-## 1. {DECISION_TITLE}
+## 1. TODO decision title
 
-**Decision:** {WHAT_WAS_DECIDED}
+**Decision:** TODO
 
-**Reason:** {WHY}
+**Reason:** TODO
 
-**Tradeoff:** {WHAT_WAS_SACRIFICED}
+**Tradeoff:** TODO
 
 ---
 
 ## Open Questions
 
-- [ ] {OPEN_QUESTION_1}
-- [ ] {OPEN_QUESTION_2}
+- [ ] TODO open question
+- [ ] TODO open question

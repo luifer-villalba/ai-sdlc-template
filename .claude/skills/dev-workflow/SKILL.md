@@ -67,7 +67,7 @@ Ticket prefix: MIZ-
 3. Handler / view + integration test
 4. Template/UI (if needed)
 5. Migration (if DB change)
-6. Update AGENTS.md if architecture changes
+6. Update .ruler/instructions.md if architecture changes, then run npx @intellectronica/ruler apply
 
 ## Architecture Guardrails
 
