@@ -1,0 +1,6 @@
+# requirements.txt
+# NOTE: Copilot will populate this based on your framework during setup.
+# FastAPI  → fastapi uvicorn[standard] sqlalchemy[asyncio] asyncpg alembic python-multipart jinja2
+# Django   → django djangorestframework psycopg2-binary
+
+# {FRAMEWORK_DEPENDENCIES}

@@ -1,0 +1,10 @@
+# requirements-dev.txt
+
+-r requirements.txt
+ruff
+pre-commit
+pytest
+# NOTE: Copilot will add the correct async/framework pytest plugin during setup.
+# FastAPI → pytest-asyncio httpx
+# Django  → pytest-django
+# {TEST_DEPENDENCIES}
