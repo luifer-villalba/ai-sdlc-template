@@ -81,13 +81,6 @@ Then adjust framework-specific files manually (see notes in each file).
 
 ---
 
-## Linear
-
-Team UUID: `7620fa65-54ee-4bcb-a640-8bf31deecbf9`
-Ticket prefix: MIZ-
-
----
-
 ## Author
 
 Luis Fernando Villalba — [luifer-villalba](https://github.com/luifer-villalba)
