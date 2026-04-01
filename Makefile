@@ -1,7 +1,6 @@
 DC := docker compose
-RUN_COMMAND ?= python -m http.server 8888
-MIGRATION_APPLY_COMMAND ?= echo "No migration apply command configured"
-MIGRATION_CREATE_COMMAND ?= echo "No migration create command configured"
+MIGRATION_APPLY_COMMAND ?= echo "No migration apply command configured" >&2; exit 1
+MIGRATION_CREATE_COMMAND ?= echo "No migration create command configured" >&2; exit 1
 
 .PHONY: build install up run dev down logs sh lint format test check migrate makemigrations clean help
 
@@ -10,7 +9,7 @@ build:  ## Build app image
 
 install: build  ## Alias for build (Docker-first workflow)
 
-up:  ## Start app + database in background
+up:  ## Start app in background
 	$(DC) up -d app
 
 run: up  ## Alias for up
@@ -43,7 +42,7 @@ migrate:  ## Apply migrations (framework-specific override)
 makemigrations:  ## Create migrations (framework-specific override)
 	$(DC) run --rm --build --remove-orphans app sh -lc "$(MIGRATION_CREATE_COMMAND)"
 
-clean:  ## Stop services and remove DB volume
+clean:  ## Stop services and remove volumes
 	$(DC) down -v --remove-orphans
 
 help:  ## Show available commands

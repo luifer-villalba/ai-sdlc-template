@@ -14,7 +14,7 @@ ai-sdlc-template/
 ├── copilot-instructions.md                    # GitHub Copilot — setup + conventions
 ├── Makefile                                   # Docker-first dev commands + validation
 ├── pyproject.toml                             # ruff + pytest config
-├── Dockerfile                                 # Production-ready container
+├── Dockerfile                                 # Dev/default container (replace or extend for production)
 ├── docker-compose.yml                         # Generic app service
 ├── requirements.txt                           # Runtime deps (project-specific)
 ├── requirements-dev.txt                       # Dev/test deps
