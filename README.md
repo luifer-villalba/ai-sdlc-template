@@ -44,14 +44,12 @@ ai-sdlc-template/
 4. Copilot detects `{PLACEHOLDER}` values and asks you 10 setup questions
 5. Copilot replaces placeholders and applies framework-specific adjustments
 6. Run `npx @intellectronica/ruler apply` to generate tool-specific instruction files (including `AGENTS.md`) from `.ruler/instructions.md`
-7. **Fill in manually** (domain-specific, Copilot cannot infer):
+7. Copy `.env.example` to `.env`
+8. **Fill in manually** (domain-specific, Copilot cannot infer):
    - `.claude/skills/domain/SKILL.md` → entities, rules, edge cases
    - `docs/architecture.md` → system diagram, data flow
    - `docs/decisions.md` → key decisions
-8. Validate base health:
-    - `make check`
-    - `make lint`
-    - `make test`
+9. Validate base health with `make check`
 
 ---
 
@@ -60,9 +58,11 @@ ai-sdlc-template/
 This template is Docker-first for local development.
 
 - Start stack: `make up`
+- Rebuild image after dependency/container changes: `make build`
 - Tail logs: `make logs`
 - Stop stack: `make down`
 - Validate: `make check`
+- Run validation steps individually when needed: `make lint`, `make test`
 
 Framework-specific runtime and migration commands are configurable:
 
@@ -97,6 +97,8 @@ Global search & replace (`Ctrl+Shift+H` in VS Code):
 | `{FIRST_PARTY_MODULES}` | `app, core` |
 
 Then run framework adjustments in setup instructions, run `npx @intellectronica/ruler apply`, and validate with `make check`.
+
+Files with explicit `TODO` markers are intentionally manual and should be completed by a human after bootstrap.
 
 ---
 
