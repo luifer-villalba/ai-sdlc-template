@@ -2,14 +2,14 @@
 
 ## Goal
 
-{DESCRIBE_THE_MAIN_GOAL_OF_THE_SYSTEM}
+TODO: Describe the main goal of the system and the problem it solves.
 
 ---
 
 ## System Diagram
 
 ```
-{ADD_ASCII_DIAGRAM_HERE}
+TODO: Add an ASCII or Mermaid system diagram.
 ```
 
 ---
@@ -17,7 +17,7 @@
 ## Data Flow
 
 ```
-{DESCRIBE_THE_MAIN_DATA_FLOW_STEP_BY_STEP}
+TODO: Describe the main data flow step by step.
 ```
 
 ---
@@ -26,13 +26,13 @@
 
 | Decision | Choice | Reason |
 |----------|--------|--------|
-| Framework | {FRAMEWORK} | {REASON} |
-| Database | {DATABASE} | {REASON} |
-| Deploy | {DEPLOY_PLATFORM} | {REASON} |
+| Framework | TODO | TODO |
+| Database | TODO | TODO |
+| Deploy | TODO | TODO |
 
 ---
 
 ## Guardrails
 
-- {GUARDRAIL_1}
-- {GUARDRAIL_2}
+- TODO guardrail
+- TODO guardrail

@@ -1,18 +1,20 @@
 # Dockerfile
 
-FROM python:3.11-slim
+# Dev/default container used for bootstrap and validation.
+# Replace or extend this image in generated projects for production runtime needs.
+
+FROM python:3.12-slim
 
 WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     gcc \
-    libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dev tooling because lint/test targets run inside this container.
+COPY requirements.txt requirements-dev.txt ./
+RUN pip install --no-cache-dir -r requirements-dev.txt
 
 # Copy application code
 COPY . .
@@ -24,7 +26,4 @@ USER appuser
 
 EXPOSE 8888
 
-# NOTE: Copilot will adjust this command based on your framework during setup.
-# FastAPI → uvicorn app.main:app --host 0.0.0.0 --port 8888
-# Django  → python manage.py runserver 0.0.0.0:8888
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8888"]
+CMD ["python", "-m", "http.server", "8888"]
